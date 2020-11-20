@@ -93,16 +93,22 @@ public class MainActivity extends AppCompatActivity {
             String name = user.getDisplayName();
             String email = user.getEmail();
             String photo = String.valueOf(user.getPhotoUrl());
+            String phone= user.getPhoneNumber();
+            System.out.println("telefono");
+            System.out.println(phone);
             System.out.println("nombre");
             System.out.println(name);
-
-
 
             HashMap<String, String> info_user = new HashMap<String, String>();
             info_user.put("user_name", user.getDisplayName());
             info_user.put("user_email", user.getEmail());
             info_user.put("user_photo", String.valueOf(user.getPhotoUrl()));
             info_user.put("user_id", user.getUid());
+
+//            actividad investigativa
+            info_user.put("user_provedor_id",user.getProviderId());
+            info_user.put("user_phone",user.getPhoneNumber());
+
 
             finish();
             Intent intent = new Intent(this, PerfilUsuario.class);
