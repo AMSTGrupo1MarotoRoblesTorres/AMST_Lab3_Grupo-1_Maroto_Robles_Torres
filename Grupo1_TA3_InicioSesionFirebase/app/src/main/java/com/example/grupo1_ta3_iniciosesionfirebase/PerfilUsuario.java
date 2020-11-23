@@ -68,7 +68,7 @@ public class PerfilUsuario extends AppCompatActivity {
         db_reference = FirebaseDatabase.getInstance().getReference().child("Grupo");
     }
     public void leerTweets(){
-        db_reference.child("Grupo 0").child("tweets").addValueEventListener(new ValueEventListener() {
+        db_reference.child("Grupo 1").child("tweets").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
