@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "Grupo1_TA3_InicioSesionFirebase"
